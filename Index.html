@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Challenge2</title>
+  </head>
+  <body>
+    <section id="Vowel"></section>
+
+    <script>
+      function vowelLetters(word) {
+        let vowel_count1 = ["A", "E", "I", "O", "U"];
+        let vowel_count2 = ["a", "e", "i", "o", "u"];
+        let myvowel = 0;
+        let output = "";
+        let counts = "";
+        let output1 = "";
+        for (let i = 0; i <= vowel_count1.length; i++) {
+          myvowel = 0;
+          for (let v = 0; v < word.length; v++) {
+            if (vowel_count2[i] == word[v]) {
+              myvowel += 1;
+            }
+            if (vowel_count1[i] == word[v]) {
+              myvowel += 1;
+            }
+          }
+          output1 += vowel_count1[i];
+          counts += "," + myvowel;
+        }
+        output += "('" + output1 + counts + ")";
+        return output;
+      }
+      let returned = vowelLetters("aeejfwerggfuixjffjfeioeaiouaeiou");
+      console.log(returned);
+    </script>
+  </body>
+</html>
